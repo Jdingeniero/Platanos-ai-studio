@@ -12,47 +12,47 @@ const routeMeta: Record<string, { title: string; description: string; canonical:
   '/actualidad': {
     title: 'Actualidad | Plátanos del Norte S.L.',
     description: 'Actualidad corporativa, acuerdos agrícolas y comunicados oficiales de Plátanos del Norte S.L.',
-    canonical: 'https://platanos-del-norte.ai.studio/actualidad'
+    canonical: 'https://jdingeniero.github.io/Platanos-ai-studio/actualidad/'
   },
   '/quienes-somos': {
     title: 'Quiénes somos | Plátanos del Norte S.L.',
     description: 'Cooperativa platanera del norte de Gran Canaria. Equipo y contacto.',
-    canonical: 'https://platanos-del-norte.ai.studio/quienes-somos'
+    canonical: 'https://jdingeniero.github.io/Platanos-ai-studio/quienes-somos/'
   },
   '/instalaciones': {
     title: 'Instalaciones | Plátanos del Norte S.L.',
     description: 'Naves de maduración con atmósfera controlada de etileno e instalaciones industriales en Santander.',
-    canonical: 'https://platanos-del-norte.ai.studio/instalaciones'
+    canonical: 'https://jdingeniero.github.io/Platanos-ai-studio/instalaciones/'
   },
   '/catalogo': {
     title: 'Catálogo comercial 2024 | Plátanos del Norte S.L.',
     description: 'Catálogo comercial 2024 en PDF de Plátanos del Norte S.L.',
-    canonical: 'https://platanos-del-norte.ai.studio/catalogo'
+    canonical: 'https://jdingeniero.github.io/Platanos-ai-studio/catalogo/'
   },
   '/contacto': {
     title: 'Contacto | Plátanos del Norte S.L.',
     description: 'Contacto directo y atención comercial: info@platanosdelnorte.es. Polígono Candina, Santander.',
-    canonical: 'https://platanos-del-norte.ai.studio/contacto'
+    canonical: 'https://jdingeniero.github.io/Platanos-ai-studio/contacto/'
   },
   '/prensa-2024': {
     title: 'Sala de prensa 2024 | Plátanos del Norte S.L.',
     description: 'Comunicados oficiales, notas de prensa y convenios agrícolas de Plátanos del Norte S.L. durante el ejercicio 2024.',
-    canonical: 'https://platanos-del-norte.ai.studio/prensa-2024'
+    canonical: 'https://jdingeniero.github.io/Platanos-ai-studio/prensa-2024/'
   },
   '/documentos': {
     title: 'Documentos públicos | Plátanos del Norte S.L.',
     description: 'Repositorio público de tarifas comerciales, calendarios de recogida y fichas técnicas oficiales.',
-    canonical: 'https://platanos-del-norte.ai.studio/documentos'
+    canonical: 'https://jdingeniero.github.io/Platanos-ai-studio/documentos/'
   },
   '/recursos': {
     title: 'Index of /recursos/',
     description: 'Apache directory index of /recursos/ containing public logos, brand guidelines and marketing assets.',
-    canonical: 'https://platanos-del-norte.ai.studio/recursos'
+    canonical: 'https://jdingeniero.github.io/Platanos-ai-studio/recursos/'
   },
   '/': {
     title: 'Plátanos del Norte S.L. | Plátano y aguacate de Gran Canaria',
     description: 'Cooperativa platanera del norte de Gran Canaria. Maduración y distribución de plátano con denominación de origen.',
-    canonical: 'https://platanos-del-norte.ai.studio/'
+    canonical: 'https://jdingeniero.github.io/Platanos-ai-studio/'
   }
 };
 
