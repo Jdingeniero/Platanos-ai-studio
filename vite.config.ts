@@ -60,7 +60,7 @@ function seoMetaPlugin(): Plugin {
   return {
     name: 'seo-meta-plugin',
     transformIndexHtml(html: string, ctx) {
-      const rawUrl = (ctx.originalUrl || ctx.path || '/').split('?')[0].replace(/\/+$/, '') || '/';
+      let rawUrl = (ctx.originalUrl || ctx.path || '/').split('?')[0].replace(/\/+$/, '') || '/';       if (rawUrl === '/index.html' || rawUrl === '/index') rawUrl = '/';
       const meta = routeMeta[rawUrl] || routeMeta[rawUrl + '/'];
       if (!meta) {
         // Unknown route (404): DO NOT apply home metadata!
