@@ -299,7 +299,7 @@ export default function App() {
   // Sync with browser URL / history on initial load and back/forward navigation
   useEffect(() => {
     const handleLocationChange = () => {
-      const p = window.location.pathname;
+      const base = import.meta.env.BASE_URL.replace(/\/$/, ''); const pathname = window.location.pathname;  const p = base && (pathname === base || pathname.startsWith(base + '/'))   ? pathname.slice(base.length) || '/'   : pathname;
       const search = window.location.search;
       const isDirectAccess = isInitialMount.current;
       isInitialMount.current = false;
