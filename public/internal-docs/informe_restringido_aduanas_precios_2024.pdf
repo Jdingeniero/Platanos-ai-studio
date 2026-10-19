@@ -1,0 +1,92 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<<
+  /Type /Catalog
+  /Pages 2 0 R
+>>
+endobj
+2 0 obj
+<<
+  /Type /Pages
+  /Kids [3 0 R]
+  /Count 1
+>>
+endobj
+3 0 obj
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [0 0 595.28 841.89]
+  /Contents 4 0 R
+  /Resources <<
+    /Font <<
+      /F1 5 0 R
+    >>
+  >>
+>>
+endobj
+4 0 obj
+<<
+  /Length 888
+>>
+stream
+BT
+/F1 12 Tf
+50 750 Td
+16 TL
+(PLATANOS DEL NORTE S.L. - EXPEDIENTE CLASIFICADO NIVEL 3) Tj
+T* (ACCESO EXCLUSIVO: DIRECCION GENERAL Y RESPONSABLE DE SISTEMAS) Tj
+T* (Ubicacion: Servidor Seguro Interno Candina \(Santander\)) Tj
+T* () Tj
+T* (1. ACUERDOS PRIVADOS DE DISTRIBUCION \(MARGENES Y PRECIOS 2024\):) Tj
+T* (- Mercadona Zona Norte: Suministro de 450 Tn/mes a 0.88 EUR/kg.) Tj
+T* (- Eroski / Caprabo: Suministro de 320 Tn/mes a 0.92 EUR/kg.) Tj
+T* (- Cuenta bancaria operativa de liquidacion \(Banco Santander\):) Tj
+T* (  ES76 0049 1500 21 2810492817 \(Beneficiario: Platanos del Norte S.L.\)) Tj
+T* () Tj
+T* (2. LLAVE CRIPTOGRAFICA DE PASARELA VPN INTERNA:) Tj
+T* (- Token de autenticacion perimetral: vpn-secret-key-platanos-991) Tj
+T* (- Acceso SSH a consola SCADA: ssh operator@10.0.4.12 -p 2202) Tj
+T* () Tj
+T* (FIN DEL EXPEDIENTE CLASIFICADO - FLAG-07-CONFIDENTIAL-EXFIL) Tj
+ET
+endstream
+endobj
+5 0 obj
+<<
+  /Type /Font
+  /Subtype /Type1
+  /BaseFont /Helvetica
+>>
+endobj
+6 0 obj
+<<
+  /Title (Expediente Clasificado: Auditoria Aduanera y Precios Mayoristas 2024)
+  /Author (Rodrigo Arango Díaz (CFO) & Carlos Mendizabal)
+  /Subject (Documento Confidencial Nivel 3 - Platanos del Norte S.L.)
+  /Keywords (aduanas; mercadona:precios; eroski; aranceles; santander; vpn-token:pltn-root-9941)
+  /Creator (LibreOffice Calc 7.5.3)
+  /Producer (LibreOffice 7.5)
+  /CreationDate (D:20231120153000+01'00')
+  /ModDate (D:20231120153000+01'00')
+>>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000019 00000 n 
+0000000072 00000 n 
+0000000135 00000 n 
+0000000293 00000 n 
+0000001234 00000 n 
+0000001310 00000 n 
+trailer
+<<
+  /Size 7
+  /Root 1 0 R
+  /Info 6 0 R
+>>
+startxref
+1782
+%%EOF

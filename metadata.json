@@ -1,0 +1,8 @@
+{
+  "name": "OSINT Lab: Plátanos del Norte S.L. - Google Hacking & Auditoría Pasiva",
+  "description": "Plataforma educativa modular de OSINT y Google Dorks con entorno empresarial simulado (Plátanos del Norte S.L.), análisis forense de metadatos, robots.txt, huella de empleados y generador de informes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

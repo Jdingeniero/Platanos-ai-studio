@@ -1,0 +1,101 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<<
+  /Type /Catalog
+  /Pages 2 0 R
+>>
+endobj
+2 0 obj
+<<
+  /Type /Pages
+  /Kids [3 0 R]
+  /Count 1
+>>
+endobj
+3 0 obj
+<<
+  /Type /Page
+  /Parent 2 0 R
+  /MediaBox [0 0 595.28 841.89]
+  /Contents 4 0 R
+  /Resources <<
+    /Font <<
+      /F1 5 0 R
+    >>
+  >>
+>>
+endobj
+4 0 obj
+<<
+  /Length 1422
+>>
+stream
+BT
+/F1 12 Tf
+50 750 Td
+16 TL
+(PLATANOS DEL NORTE S.L. - INFORME TECNICO DE AUDITORIA INTERNA) Tj
+T* (Fecha: 28 de Octubre de 2023) Tj
+T* (Elaborado por: Carlos Mendizabal Ruiz \(Responsable IT & Sistemas\)) Tj
+T* (Clasificacion: ESTRICTAMENTE CONFIDENCIAL / USO INTERNO) Tj
+T* () Tj
+T* (1. RESUMEN DE INFRAESTRUCTURA Y REDES EN NAVES CANDINA \(SANTANDER\)) Tj
+T* (- Rango de red local privada: 192.168.10.0/24 \(VLAN 10 Operaciones\)) Tj
+T* (- Servidor NAS Synology DiskStation DS920+: IP 192.168.10.45) Tj
+T* (- Pasarela VPN remota: vpn.platanosdelnorte.es \(Puerto UDP 1194\)) Tj
+T* (- Enlace WAN fibra: 185.132.44.18 \(Nominalia Internet\)) Tj
+T* () Tj
+T* (2. DISPOSITIVOS Y HALLAZGOS CRITICOS PENDIENTES DE BASTIONADO) Tj
+T* (- Camaras frigorificas de vigilancia \(CCTV\):) Tj
+T* (  * Direccion: 192.168.10.80 a 192.168.10.88) Tj
+T* (  * Contrasena de administracion por defecto: admin / PlatanosSegura2023) Tj
+T* (  * Comunidad SNMP v2c de monitorizacion: public_platanos) Tj
+T* (- Servidor de base de datos preproduccion:) Tj
+T* (  * IP interna: 172.24.0.5 \(Docker: db-preprod\)) Tj
+T* (  * Script de backup nocturno: /var/www/platanos/backup-2023/) Tj
+T* (  * Tarea programada: cron diario a las 03:00) Tj
+T* () Tj
+T* (3. ACCESO REMOTO) Tj
+T* (- Recordatorio a tecnicos: El archivo de configuracion OpenVPN se encuentra) Tj
+T* (  alojado temporalmente en /internal-docs/config_vpn_teletrabajo_personal.ovpn.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<<
+  /Type /Font
+  /Subtype /Type1
+  /BaseFont /Helvetica
+>>
+endobj
+6 0 obj
+<<
+  /Title (Auditoría Interna de Infraestructura y Redes - Naves Candina v1.3)
+  /Author (Carlos Mendizábal Ruiz <c.mendizabal@platanosdelnorte.es>)
+  /Subject (Auditoría Confidencial Sistemas Candina - Uso Restringido)
+  /Keywords (candina; santander; vlan10; nas:192.168.10.45; snmp:public_platanos; gps:43.4568,-3.8321; cctv:PlatanosSegura2023)
+  /Creator (Microsoft® Word 2016 para Mac)
+  /Producer (macOS Version 13.5 (Build 22G74) Quartz PDFContext)
+  /CreationDate (D:20231028091533+01'00')
+  /ModDate (D:20231028091533+01'00')
+>>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000019 00000 n 
+0000000072 00000 n 
+0000000135 00000 n 
+0000000293 00000 n 
+0000001769 00000 n 
+0000001845 00000 n 
+trailer
+<<
+  /Size 7
+  /Root 1 0 R
+  /Info 6 0 R
+>>
+startxref
+2403
+%%EOF

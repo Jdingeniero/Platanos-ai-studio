@@ -1,0 +1,8 @@
+ID	Proveedor	Servicio	Usuario	Password	Email_Contacto	Notas_Seguridad
+1	Platanos del Norte S.L.	Acceso Intranet /admin-panel	cmendizabal	PlatanosCandina2023*!	carlos.mendizabal@platanosdelnorte.es	Credencial acceso panel SCADA y camaras Candina (FLAG-04-PASSWORD-IN-FILE)
+2	Nominalia Internet	Hosting y Dominio .es	platanos_admin	NominaliaPass99*!	r.arango@platanosdelnorte.es	Renovacion automatica en abril
+3	GasEtileno Norte	Suministro Botellas Etileno	operador_gas	EtilenoSeguro#24	pedidos@gasetileno.com	Valvula de seguridad nave 14
+4	Transportes FrioExpress	Flota Camiones Santander-Bilbao	logistica_pltn	Frio2023Express$	carlos.mendizabal@platanosdelnorte.es	Telemetria GPS camiones
+5	Synology NAS Storage	Almacenamiento Auditorias	admin	SynologyAdminCandina2023	c.mendizabal@platanosdelnorte.es	IP 192.168.10.45 puerto 5000
+6	MySQL Preproduccion	Base de Datos Clientes	preprod_user	PlatanosMySQL2023!#	cmendi-dev@github	Ver script backup_sync.sh
+7	Auditoria Credenciales OSINT	Filtro Passwords en Fichero	auditor_sec	FLAG-04-PASSWORD-IN-FILE	seguridad@platanosdelnorte.es	FLAG-04-PASSWORD-IN-FILE

@@ -1,0 +1,35 @@
+# robots.txt para Plátanos del Norte S.L.
+# Generado automáticamente por CMS el 2023-11-10
+User-agent: *
+
+# Áreas públicas de catálogo, prensa y documentación (Indexables en Google)
+Allow: /
+Allow: /quienes-somos
+Allow: /instalaciones
+Allow: /catalogo
+Allow: /contacto
+Allow: /actualidad
+Allow: /prensa-2024
+Allow: /documentos
+Allow: /recursos
+Allow: /documentos/catalogo_comercial_platanos_canarias_2024.pdf
+Allow: /documentos/tarifa_mayorista_2024.pdf
+Allow: /documentos/calendario_recogida_2024.xlsx
+
+# Rutas restringidas - NO RASTREAR NI INDEXAR EN MOTORES DE BÚSQUEDA
+Disallow: /admin-panel/
+Disallow: /internal-docs/
+Disallow: /backup-2023/
+Disallow: /chat/logs/
+Disallow: /rh-nominas/
+Disallow: /staging-api/
+Disallow: /camaras-cctv/
+Disallow: /cgi-bin/
+
+# NOTA PARA EL ADMINISTRADOR (c.mendizabal):
+# Recuerda no subir las auditorías de Candina al directorio /internal-docs/ sin contraseña
+# La sincronización nocturna con GitHub corre desde el cron de las 03:00
+
+Sitemap: https://platanos-del-norte.ai.studio/sitemap.xml
+
+# FLAG-01-ROBOTS-REVEALED
