@@ -30,6 +30,6 @@ Disallow: /cgi-bin/
 # Recuerda no subir las auditorías de Candina al directorio /internal-docs/ sin contraseña
 # La sincronización nocturna con GitHub corre desde el cron de las 03:00
 
-Sitemap: https://platanos-del-norte.ai.studio/sitemap.xml
+Sitemap: https://jdingeniero.github.io/Platanos-ai-studio/sitemap.xml
 
 # FLAG-01-ROBOTS-REVEALED
