@@ -371,9 +371,9 @@ function staticDocumentsPlugin(): Plugin {
     }
   };
 }
-
 export default defineConfig(() => {
   return {
+    base: '/Platanos-ai-studio/',
     plugins: [react(), tailwindcss(), seoMetaPlugin(), staticDocumentsPlugin()],
     resolve: {
       alias: {
