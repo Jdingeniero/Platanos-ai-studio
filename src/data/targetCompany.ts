@@ -327,24 +327,24 @@ Disallow: /cgi-bin/
 # Recuerda no subir las auditorías de Candina al directorio /internal-docs/ sin contraseña
 # La sincronización nocturna con GitHub corre desde el cron de las 03:00
 
-Sitemap: https://platanos-del-norte.ai.studio/sitemap.xml
+Sitemap: https://jdingeniero.github.io/Platanos-ai-studio/sitemap.xml
 
 # FLAG-01-ROBOTS-REVEALED
 `;
 
 export const SITEMAP_XML_CONTENT = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://platanos-del-norte.ai.studio/</loc><priority>1.0</priority></url>
-  <url><loc>https://platanos-del-norte.ai.studio/quienes-somos</loc><priority>0.8</priority></url>
-  <url><loc>https://platanos-del-norte.ai.studio/instalaciones</loc><priority>0.8</priority></url>
-  <url><loc>https://platanos-del-norte.ai.studio/catalogo</loc><priority>0.8</priority></url>
-  <url><loc>https://platanos-del-norte.ai.studio/contacto</loc><priority>0.6</priority></url>
-  <url><loc>https://platanos-del-norte.ai.studio/prensa-2024</loc><priority>0.7</priority></url>
-  <url><loc>https://platanos-del-norte.ai.studio/documentos</loc><priority>0.7</priority></url>
-  <url><loc>https://platanos-del-norte.ai.studio/recursos</loc><priority>0.7</priority></url>
-  <url><loc>https://platanos-del-norte.ai.studio/documentos/catalogo_comercial_platanos_canarias_2024.pdf</loc><priority>0.5</priority></url>
-  <url><loc>https://platanos-del-norte.ai.studio/documentos/tarifa_mayorista_2024.pdf</loc><priority>0.5</priority></url>
-  <url><loc>https://platanos-del-norte.ai.studio/documentos/calendario_recogida_2024.xlsx</loc><priority>0.5</priority></url>
+  <url><loc>https://jdingeniero.github.io/Platanos-ai-studio/</loc><priority>1.0</priority></url>
+  <url><loc>https://jdingeniero.github.io/Platanos-ai-studio/quienes-somos</loc><priority>0.8</priority></url>
+  <url><loc>https://jdingeniero.github.io/Platanos-ai-studio/instalaciones</loc><priority>0.8</priority></url>
+  <url><loc>https://jdingeniero.github.io/Platanos-ai-studio/catalogo</loc><priority>0.8</priority></url>
+  <url><loc>https://jdingeniero.github.io/Platanos-ai-studio/contacto</loc><priority>0.6</priority></url>
+  <url><loc>https://jdingeniero.github.io/Platanos-ai-studio/prensa-2024</loc><priority>0.7</priority></url>
+  <url><loc>https://jdingeniero.github.io/Platanos-ai-studio/documentos</loc><priority>0.7</priority></url>
+  <url><loc>https://jdingeniero.github.io/Platanos-ai-studio/recursos</loc><priority>0.7</priority></url>
+  <url><loc>https://jdingeniero.github.io/Platanos-ai-studio/documentos/catalogo_comercial_platanos_canarias_2024.pdf</loc><priority>0.5</priority></url>
+  <url><loc>https://jdingeniero.github.io/Platanos-ai-studio/documentos/tarifa_mayorista_2024.pdf</loc><priority>0.5</priority></url>
+  <url><loc>https://jdingeniero.github.io/Platanos-ai-studio/documentos/calendario_recogida_2024.xlsx</loc><priority>0.5</priority></url>
 </urlset>`;
 
 export const SIMULATED_GITHUB_REPO = {
