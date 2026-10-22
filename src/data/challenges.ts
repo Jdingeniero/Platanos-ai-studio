@@ -23,14 +23,14 @@ export const OFFICIAL_CHALLENGES: Challenge[] = [
     flag: 'FLAG-D1-SITE-MAPPED',
     shortDesc: 'Localización de la sala de prensa 2024 oculta del navbar pero indexada en el sitemap de Google.',
     hint: 'Usa el operador site: para acotar las búsquedas al dominio de la cooperativa y descubrir páginas públicas no visibles en el menú.',
-    dorkSuggestion: 'site:platanos-del-norte.ai.studio prensa',
+    dorkSuggestion: 'site:jdingeniero.github.io/Platanos-ai-studio prensa',
     operator: 'site:',
     phase: 'passive',
     phaseLabel: 'Fase 1: Pasiva (Google Dorks)',
     hints: [
       'Un analista OSINT busca limitar las respuestas de Google a un único dominio objetivo para mapear todo su contenido público.',
-      'El operador site: restringe la búsqueda exclusivamente al dominio indicado (ej. site:platanos-del-norte.ai.studio).',
-      'Ejecuta site:platanos-del-norte.ai.studio prensa-2024 o revisa el sitemap enlazado en el pie de página para acceder a /prensa-2024 y copiar la flag.'
+      'El operador site: restringe la búsqueda exclusivamente al dominio indicado (ej. site:jdingeniero.github.io/Platanos-ai-studio).',
+      'Ejecuta site:jdingeniero.github.io/Platanos-ai-studio prensa-2024 o revisa el sitemap enlazado en el pie de página para acceder a /prensa-2024 y copiar la flag.'
     ]
   },
   {
@@ -40,14 +40,14 @@ export const OFFICIAL_CHALLENGES: Challenge[] = [
     flag: 'FLAG-D2-TITLE-FOUND',
     shortDesc: 'Filtrado de páginas corporativas que contengan específicamente "catálogo comercial" en su etiqueta HTML <title>.',
     hint: 'Busca páginas cuyo título contenga las palabras exactas "catálogo comercial".',
-    dorkSuggestion: 'site:platanos-del-norte.ai.studio intitle:"catálogo comercial"',
+    dorkSuggestion: 'site:jdingeniero.github.io/Platanos-ai-studio intitle:"catálogo comercial"',
     operator: 'intitle:',
     phase: 'passive',
     phaseLabel: 'Fase 1: Pasiva (Google Dorks)',
     hints: [
       'Los títulos HTML (<title>) definen la temática principal de cada página web y son indexados de forma prioritaria por Google.',
       'El operador intitle:"palabra o frase" obliga a que el término aparezca exactamente en el título de la página.',
-      'Combina site:platanos-del-norte.ai.studio intitle:"catálogo comercial" para navegar a /catalogo y ver la flag visible en la ficha técnica.'
+      'Combina site:jdingeniero.github.io/Platanos-ai-studio intitle:"catálogo comercial" para navegar a /catalogo y ver la flag visible en la ficha técnica.'
     ]
   },
   {
@@ -57,14 +57,14 @@ export const OFFICIAL_CHALLENGES: Challenge[] = [
     flag: 'FLAG-D3-URL-FOUND',
     shortDesc: 'Detección del repositorio público de documentación oficial filtrando la cadena en la propia URL.',
     hint: 'Busca URLs de la cooperativa que contengan la palabra clave "documentos".',
-    dorkSuggestion: 'site:platanos-del-norte.ai.studio inurl:documentos',
+    dorkSuggestion: 'site:jdingeniero.github.io/Platanos-ai-studio inurl:documentos',
     operator: 'inurl:',
     phase: 'passive',
     phaseLabel: 'Fase 1: Pasiva (Google Dorks)',
     hints: [
       'Muchas empresas organizan sus recursos públicos bajo ramas de URL temáticas como /docs, /documentos o /descargas.',
       'El operador inurl: filtra las páginas cuya dirección URL incluya la cadena buscada.',
-      'Usa site:platanos-del-norte.ai.studio inurl:documentos para descubrir el índice público /documentos y copiar la flag.'
+      'Usa site:jdingeniero.github.io/Platanos-ai-studio inurl:documentos para descubrir el índice público /documentos y copiar la flag.'
     ]
   },
   {
@@ -74,14 +74,14 @@ export const OFFICIAL_CHALLENGES: Challenge[] = [
     flag: 'FLAG-D4-PDF-FOUND',
     shortDesc: 'Localización y descarga directa de documentos PDF indexados para examinar su contenido textual.',
     hint: 'Filtra documentos en formato PDF que contengan información de tarifas o precios mayoristas.',
-    dorkSuggestion: 'site:platanos-del-norte.ai.studio filetype:pdf tarifa',
+    dorkSuggestion: 'site:jdingeniero.github.io/Platanos-ai-studio filetype:pdf tarifa',
     operator: 'filetype:pdf',
     phase: 'passive',
     phaseLabel: 'Fase 1: Pasiva (Google Dorks)',
     hints: [
       'Google indexa el contenido completo del texto incrustado dentro de los archivos PDF corporativos.',
       'El operador filetype:pdf (o ext:pdf) localiza documentos descargables en dicho formato.',
-      'Lanza site:platanos-del-norte.ai.studio filetype:pdf mayorista para descargar tarifa_mayorista_2024.pdf y leer la firma FLAG-D4-PDF-FOUND.'
+      'Lanza site:jdingeniero.github.io/Platanos-ai-studio filetype:pdf mayorista para descargar tarifa_mayorista_2024.pdf y leer la firma FLAG-D4-PDF-FOUND.'
     ]
   },
   {
@@ -91,7 +91,7 @@ export const OFFICIAL_CHALLENGES: Challenge[] = [
     flag: 'FLAG-D5-METADATA',
     shortDesc: 'Descarga del calendario agrícola en formato Excel y extracción de la autoría oculta en los metadatos del documento.',
     hint: 'Localiza hojas de cálculo XLSX indexadas e inspecciona sus metadatos (autor/creador) con exiftool o las propiedades del archivo.',
-    dorkSuggestion: 'site:platanos-del-norte.ai.studio filetype:xlsx (+ inspeccionar metadatos con exiftool)',
+    dorkSuggestion: 'site:jdingeniero.github.io/Platanos-ai-studio filetype:xlsx (+ inspeccionar metadatos con exiftool)',
     operator: 'filetype:xlsx',
     phase: 'passive',
     phaseLabel: 'Fase 1: Pasiva (Google Dorks)',
@@ -108,14 +108,14 @@ export const OFFICIAL_CHALLENGES: Challenge[] = [
     flag: 'FLAG-D6-OPENDIR',
     shortDesc: 'Identificación de réplicas de indexado de directorios Apache públicos con recursos benignos indexados.',
     hint: 'Busca directorios con indexado automático Apache habilitado usando la clásica cadena "index of" en el título.',
-    dorkSuggestion: 'site:platanos-del-norte.ai.studio intitle:"index of" recursos',
+    dorkSuggestion: 'site:jdingeniero.github.io/Platanos-ai-studio intitle:"index of" recursos',
     operator: 'intitle:"index of"',
     phase: 'passive',
     phaseLabel: 'Fase 1: Pasiva (Google Dorks)',
     hints: [
       'Cuando un servidor web Apache no encuentra un index.html en una carpeta permitida, genera un listado de ficheros con el título "Index of /".',
       'El dork intitle:"index of" permite encontrar estos listados automáticos en cualquier servidor web.',
-      'Lanza site:platanos-del-norte.ai.studio intitle:"index of" recursos para acceder al directorio público /recursos/ y copiar la flag.'
+      'Lanza site:jdingeniero.github.io/Platanos-ai-studio intitle:"index of" recursos para acceder al directorio público /recursos/ y copiar la flag.'
     ]
   },
 
