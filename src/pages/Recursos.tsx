@@ -83,7 +83,7 @@ export function Recursos() {
         {/* Apache Signature */}
         <div className="pt-4 border-t border-slate-300 text-xs text-slate-500">
           <address className="not-italic">
-            Apache/2.4.52 (Ubuntu) Server at platanos-del-norte.ai.studio Port 443
+            Apache/2.4.52 (Ubuntu) Server at jdingeniero.github.io/Platanos-ai-studio Port 443
           </address>
         </div>
 
