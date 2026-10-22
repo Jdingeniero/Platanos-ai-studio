@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const BASE = 'https://platanos-del-norte.ai.studio';
+const BASE = 'https://jdingeniero.github.io/Platanos-ai-studio';
 
 export function usePageMeta(title: string, description?: string, path: string = '') {
   useEffect(() => {
