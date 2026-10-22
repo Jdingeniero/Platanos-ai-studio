@@ -135,7 +135,7 @@ export function RetosModal({
       `  - Fases 2-4 (Activa / Intrusión & SCADA): ${completedActiveCount}/${activeChallenges.length}\n` +
       `Total de ayudas/consejos solicitados: ${totalHintsRequested}\n` +
       `Fecha de extracción: ${new Date().toLocaleString('es-ES')}\n` +
-      `Objetivo evaluado: https://platanos-del-norte.ai.studio\n\n`;
+      `Objetivo evaluado: https://jdingeniero.github.io/Platanos-ai-studio\n\n`;
 
     const passiveSectionHeader = `-----------------------------------------------------------------\n` +
       `  FASE 1: RECOPILACIÓN PASIVA (GOOGLE DORKS - PÚBLICO E INDEXADO)\n` +
