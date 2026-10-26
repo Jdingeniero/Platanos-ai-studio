@@ -31,7 +31,7 @@ export function Inicio({ navigateTo }: InicioProps) {
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-4 text-xs font-semibold">
             <a
-              href="/documentos/catalogo_comercial_platanos_canarias_2024.pdf"
+              href="/Platanos-ai-studio/documentos/catalogo_comercial_platanos_canarias_2024.pdf"
               download="catalogo_comercial_platanos_canarias_2024.pdf"
               className="px-5 py-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors flex items-center gap-2 shadow-xs"
             >
