@@ -12,10 +12,10 @@ export function Recursos() {
   const files = [
     { name: 'Parent Directory', href: '/', date: '-', size: '-', type: 'parent' },
     { name: 'logo_platanos_del_norte_vector.svg', href: '#', date: '2024-01-10 11:20', size: '24K', type: 'image' },
-    { name: 'manual_identidad_corporativa_2024.pdf', href: '/documentos/catalogo_comercial_platanos_canarias_2024.pdf', date: '2024-01-12 16:45', size: '1.9K', type: 'pdf' },
-    { name: 'folleto_feria_fruit_attraction.pdf', href: '/documentos/tarifa_mayorista_2024.pdf', date: '2024-01-14 09:15', size: '1.7K', type: 'pdf' },
+    { name: 'manual_identidad_corporativa_2024.pdf', href: '/Platanos-ai-studio/documentos/catalogo_comercial_platanos_canarias_2024.pdf', date: '2024-01-12 16:45', size: '1.9K', type: 'pdf' },
+    { name: 'folleto_feria_fruit_attraction.pdf', href: '/Platanos-ai-studio/documentos/tarifa_mayorista_2024.pdf', date: '2024-01-14 09:15', size: '1.7K', type: 'pdf' },
     { name: 'banner_promocional_platanocanario_1200x630.png', href: '#', date: '2024-01-18 14:02', size: '185K', type: 'image' },
-    { name: 'certificacion_calidad_origen_galdar.pdf', href: '/documentos/catalogo_comercial_platanos_canarias_2024.pdf', date: '2024-01-20 10:30', size: '1.9K', type: 'pdf' }
+    { name: 'certificacion_calidad_origen_galdar.pdf', href: '/Platanos-ai-studio/documentos/catalogo_comercial_platanos_canarias_2024.pdf', date: '2024-01-20 10:30', size: '1.9K', type: 'pdf' }
   ];
 
   return (
