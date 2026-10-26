@@ -32,7 +32,7 @@ export function Catalogo() {
           </div>
 
           <a
-            href="/documentos/catalogo_comercial_platanos_canarias_2024.pdf"
+            href="/Platanos-ai-studio/documentos/catalogo_comercial_platanos_canarias_2024.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-2.5 bg-emerald-700 hover:bg-emerald-600 text-white rounded-lg text-xs font-semibold flex items-center gap-2 transition-colors self-start sm:self-auto shrink-0 shadow-xs cursor-pointer"
