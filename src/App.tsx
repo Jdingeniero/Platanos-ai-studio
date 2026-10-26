@@ -678,7 +678,7 @@ export default function App() {
                 <span className="font-bold text-slate-900 text-sm">https://{TARGET_DOMAIN}/robots.txt</span>
               </div>
               <a 
-                href="/robots.txt" 
+                href="/Platanos-ai-studio/robots.txt" 
                 target="_blank" 
                 rel="noreferrer"
                 className="text-xs text-blue-600 hover:underline flex items-center gap-1 font-mono"
