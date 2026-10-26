@@ -17,7 +17,7 @@ export function Documentos() {
       size: '1.7 KB',
       format: 'PDF',
       type: 'pdf',
-      href: '/documentos/tarifa_mayorista_2024.pdf'
+      href: '/Platanos-ai-studio/documentos/tarifa_mayorista_2024.pdf'
     },
     {
       fileName: 'calendario_recogida_2024.xlsx',
@@ -26,7 +26,7 @@ export function Documentos() {
       size: '7.8 KB',
       format: 'XLSX',
       type: 'xlsx',
-      href: '/documentos/calendario_recogida_2024.xlsx'
+      href: '/Platanos-ai-studio/documentos/calendario_recogida_2024.xlsx'
     },
     {
       fileName: 'catalogo_comercial_platanos_canarias_2024.pdf',
@@ -35,7 +35,7 @@ export function Documentos() {
       size: '1.9 KB',
       format: 'PDF',
       type: 'pdf',
-      href: '/documentos/catalogo_comercial_platanos_canarias_2024.pdf'
+      href: '/Platanos-ai-studio/documentos/catalogo_comercial_platanos_canarias_2024.pdf'
     }
   ];
 
