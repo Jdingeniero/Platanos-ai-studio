@@ -194,7 +194,7 @@ export const TARGET_FILES: TargetFileItem[] = [
   {
     id: 'file-catalogo-publico',
     name: 'catalogo_comercial_platanos_canarias_2024.pdf',
-    path: '/documentos/catalogo_comercial_platanos_canarias_2024.pdf',
+    path: '/Platanos-ai-studio/documentos/catalogo_comercial_platanos_canarias_2024.pdf',
     size: '4.2 MB',
     lastModified: '2024-01-15 10:00:00',
     mimeType: 'application/pdf',
