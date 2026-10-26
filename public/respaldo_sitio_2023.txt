@@ -1,0 +1,6 @@
+Copia de seguridad de la configuracion del sitio - Platanos del Norte S.L.
+Generado automaticamente por la tarea de respaldo nocturna.
+Fecha de generacion: 2023-11-02 03:00
+Incluye: estructura de navegacion, textos corporativos y plantillas publicas.
+Este archivo no deberia estar accesible publicamente ni enlazado desde la web.
+Referencia interna de verificacion de respaldo: FLAG-10-HIDDEN-BACKUP
