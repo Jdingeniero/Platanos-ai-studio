@@ -824,7 +824,7 @@ Sitemap: https://jdingeniero.github.io/Platanos-ai-studio/sitemap.xml
                     <td className="p-3 text-slate-600 font-bold">2.6 KB</td>
                     <td className="p-3 text-right">
                       <a
-                        href="/internal-docs/auditoria_interna_seguridad_2023.pdf"
+                        href="/Platanos-ai-studio/internal-docs/auditoria_interna_seguridad_2023.pdf"
                         download="auditoria_interna_seguridad_2023.pdf"
                         className="px-3 py-1 bg-emerald-700 hover:bg-emerald-600 text-white font-sans text-xs font-semibold rounded inline-flex items-center gap-1 transition-colors"
                       >
@@ -844,7 +844,7 @@ Sitemap: https://jdingeniero.github.io/Platanos-ai-studio/sitemap.xml
                     <td className="p-3 text-slate-600 font-bold">1.9 KB</td>
                     <td className="p-3 text-right">
                       <a
-                        href="/internal-docs/especificaciones_camaras_maduracion_v2.pdf"
+                        href="/Platanos-ai-studio/internal-docs/especificaciones_camaras_maduracion_v2.pdf"
                         download="especificaciones_camaras_maduracion_v2.pdf"
                         className="px-3 py-1 bg-emerald-700 hover:bg-emerald-600 text-white font-sans text-xs font-semibold rounded inline-flex items-center gap-1 transition-colors"
                       >
@@ -867,7 +867,7 @@ Sitemap: https://jdingeniero.github.io/Platanos-ai-studio/sitemap.xml
                     <td className="p-3 text-slate-600 font-bold">892 B</td>
                     <td className="p-3 text-right">
                       <a
-                        href="/internal-docs/control_acceso_proveedores_2023.xls"
+                        href="/Platanos-ai-studio/internal-docs/control_acceso_proveedores_2023.xls"
                         download="control_acceso_proveedores_2023.xls"
                         onClick={() => registerChallenge('reto-4')}
                         className="px-3 py-1 bg-emerald-700 hover:bg-emerald-600 text-white font-sans text-xs font-semibold rounded inline-flex items-center gap-1 transition-colors"
@@ -888,7 +888,7 @@ Sitemap: https://jdingeniero.github.io/Platanos-ai-studio/sitemap.xml
                     <td className="p-3 text-slate-600 font-bold">722 B</td>
                     <td className="p-3 text-right">
                       <a
-                        href="/internal-docs/config_vpn_teletrabajo_personal.ovpn"
+                        href="/Platanos-ai-studio/internal-docs/config_vpn_teletrabajo_personal.ovpn"
                         download="config_vpn_teletrabajo_personal.ovpn"
                         className="px-3 py-1 bg-slate-800 hover:bg-slate-700 text-white font-sans text-xs font-semibold rounded inline-flex items-center gap-1 transition-colors"
                       >
@@ -1298,7 +1298,7 @@ Sitemap: https://jdingeniero.github.io/Platanos-ai-studio/sitemap.xml
                     </div>
 
                     <a
-                      href="/internal-docs/informe_restringido_aduanas_precios_2024.pdf"
+                      href="/Platanos-ai-studio/internal-docs/informe_restringido_aduanas_precios_2024.pdf"
                       download="informe_restringido_aduanas_precios_2024.pdf"
                       onClick={() => registerChallenge('reto-7')}
                       className="px-4 py-2.5 bg-rose-700 hover:bg-rose-800 text-white rounded-lg text-xs font-semibold flex items-center gap-2 transition-colors self-start sm:self-auto shrink-0 shadow-xs cursor-pointer"
