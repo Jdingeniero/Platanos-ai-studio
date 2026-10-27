@@ -9,7 +9,7 @@ export function Instalaciones() {
   );
 
   return (
-    <div className="py-12 px-6 max-w-5xl mx-auto space-y-8">
+    <div className="py-12 px-6 max-w-5xl mx-auto space-y-8"><img src="/Platanos-ai-studio/nave_maduracion_candina.svg" alt="Nave de maduracion - Poligono Candina" className="w-full rounded-lg border border-slate-200" />
       <div className="border-b border-slate-200 pb-6">
         <span className="text-xs uppercase tracking-widest text-emerald-800 font-bold">Instalaciones Industriales</span>
         <h1 className="text-3xl font-extrabold text-slate-900 mt-1">Naves Candina: Maduración de Atmósfera Controlada</h1>
