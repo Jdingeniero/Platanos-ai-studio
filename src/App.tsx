@@ -1171,7 +1171,32 @@ Sitemap: https://jdingeniero.github.io/Platanos-ai-studio/sitemap.xml
                     <span>Cerrar Sesión</span>
                   </button>
                 </div>
-
+                {/* Enlace a la consola de retos opcionales (recompensa por lograr acceso admin) */}
+                <a
+                  href="/Platanos-ai-studio/retos-opcionales.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block border-2 border-amber-300 bg-gradient-to-br from-amber-50 to-white rounded-2xl p-6 shadow-xs hover:border-amber-400 hover:shadow-md transition-all group no-underline"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-amber-500 text-white flex items-center justify-center text-2xl shrink-0">
+                      🎯
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span className="font-bold text-slate-900 text-base">Bloque de retos OPCIONALES desbloqueado</span>
+                        <span className="text-[10px] bg-amber-500 text-white font-mono px-2 py-0.5 rounded font-bold">AVANZADO</span>
+                      </div>
+                      <p className="text-xs text-slate-600 mt-1">
+                        Has conseguido acceso de administrador. Como recompensa se abre el bloque avanzado: 5 retos opcionales de OSINT (sin pistas) con entrega en presentación.
+                      </p>
+                      <span className="inline-flex items-center gap-1.5 mt-3 text-xs font-semibold text-amber-700 group-hover:gap-2.5 transition-all">
+                        Abrir la consola de retos opcionales
+                        <span aria-hidden="true">→</span>
+                      </span>
+                    </div>
+                  </div>
+                </a>
                 {/* SCADA Telemetry & Industrial Controls */}
                 <div className="border border-slate-200 rounded-2xl p-6 bg-white space-y-6 shadow-xs">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-3">
