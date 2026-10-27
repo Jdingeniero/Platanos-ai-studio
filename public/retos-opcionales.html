@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Retos Opcionales OSINT</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+  html,body{margin:0}
+  img{max-width:100%}
+  [hidden]{display:none!important}
+  /* Consola de los 5 retos opcionales: 3 con flag (hash) + 2 de analisis (checkbox). Entrega: presentacion. */
+  :root{
+    color-scheme: dark;
+    --bg:#0b0f12; --panel:#12181d; --panel-2:#172028;
+    --fg:#e7eef2; --muted:#8a99a3; --line:#243039; --line-soft:#1b242b;
+    --accent:#f5c542; --ok:#46c766; --ok-bg:#102a18; --ok-line:#1f6b37;
+    --bad:#f26257; --bad-line:#6e2b28;
+    --mono:'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --sans:'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --maxw:800px; --radius:10px;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--bg); color:var(--fg); font-family:var(--sans); line-height:1.5; -webkit-font-smoothing:antialiased;}
+  body::before{content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top,0px); background:var(--bg); z-index:20;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding-left:max(16px, env(safe-area-inset-left,0px)); padding-right:max(16px, env(safe-area-inset-right,0px)); padding-block:24px 56px;}
+
+  header{display:flex; flex-wrap:wrap; align-items:flex-start; justify-content:space-between; gap:14px 18px; padding-bottom:18px; border-bottom:1px solid var(--line);}
+  .brand{display:flex; align-items:center; gap:12px; min-width:0;}
+  .glyph{flex:none; width:40px; height:40px; border:1px solid var(--line); border-radius:9px; background:var(--panel-2); display:grid; place-items:center;}
+  .title-block h1{margin:0; font-family:var(--mono); font-weight:600; font-size:1.18rem; text-wrap:balance;}
+  .title-block .sub{margin:2px 0 0; color:var(--muted); font-size:.82rem;}
+  .title-block .sub b{color:var(--fg); font-weight:600;}
+  .clock{font-family:var(--mono); font-size:.76rem; color:var(--muted); text-align:right; line-height:1.6; white-space:nowrap; font-variant-numeric:tabular-nums;}
+  .clock .t{color:var(--fg); font-size:.95rem; font-weight:500;}
+
+  .banner{margin-top:18px; display:flex; gap:11px; align-items:flex-start; background:var(--panel); border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:var(--radius); padding:13px 15px; font-size:.86rem; color:var(--fg);}
+  .banner b{color:var(--accent);}
+  .banner .muted{color:var(--muted);}
+
+  .progress-card{margin-top:16px; background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); padding:16px 18px; display:flex; flex-wrap:wrap; align-items:center; gap:14px 20px;}
+  .count{display:flex; align-items:baseline; gap:8px; font-family:var(--mono);}
+  .count .n{font-size:2rem; font-weight:700; line-height:1; font-variant-numeric:tabular-nums;}
+  .count .d{color:var(--muted); font-size:1rem;}
+  .count .lbl{color:var(--muted); font-size:.72rem; text-transform:uppercase; letter-spacing:.09em; align-self:center;}
+  .bar-wrap{flex:1 1 220px; min-width:0;}
+  .bar{height:9px; background:var(--panel-2); border:1px solid var(--line); border-radius:999px; overflow:hidden;}
+  .bar > i{display:block; height:100%; width:0%; background:linear-gradient(90deg, var(--ok), #7ee0a0); transition:width .35s ease; border-radius:999px;}
+  .bar-sub{margin-top:7px; font-size:.72rem; color:var(--muted); font-family:var(--mono); font-variant-numeric:tabular-nums;}
+
+  .sec{margin-top:24px;}
+  .sec-head{font-size:.78rem; text-transform:uppercase; letter-spacing:.12em; color:var(--accent); font-weight:600; margin:0 0 10px;}
+
+  .reto{border:1px solid var(--line-soft); border-radius:9px; background:var(--panel); padding:13px 15px; margin-bottom:10px; transition:border-color .2s ease, background .2s ease;}
+  .reto-top{display:flex; align-items:center; gap:10px; margin-bottom:4px;}
+  .chip{font-family:var(--mono); font-size:.7rem; font-weight:600; color:var(--muted); border:1px solid var(--line); border-radius:6px; padding:3px 7px; white-space:nowrap;}
+  .reto-title{font-weight:600; font-size:.95rem;}
+  .reto-desc{color:var(--muted); font-size:.85rem; margin:2px 0 11px;}
+  .flag-row{display:flex; flex-wrap:wrap; align-items:center; gap:10px;}
+  .flag-in{flex:1 1 240px; min-width:0; font-family:var(--mono); font-size:.86rem; color:var(--fg); background:var(--bg); border:1px solid var(--line); border-radius:7px; padding:9px 11px;}
+  .flag-in::placeholder{color:#55646d;}
+  .flag-in:focus{outline:none; border-color:var(--accent); box-shadow:0 0 0 3px rgba(245,197,66,.15);}
+  .flag-in:read-only{background:var(--ok-bg); border-color:var(--ok-line); color:#c8f3d5;}
+  .status{font-family:var(--mono); font-size:.76rem; color:var(--muted); display:flex; align-items:center; gap:6px; min-width:84px;}
+  .status .dot{width:8px; height:8px; border-radius:50%; background:#3a464e; flex:none;}
+  .reto.ok{border-color:var(--ok-line); background:var(--ok-bg);}
+  .reto.ok .chip{color:var(--ok); border-color:var(--ok-line);}
+  .reto.ok .status{color:var(--ok);} .reto.ok .status .dot{background:var(--ok);}
+  .reto.bad .flag-in{border-color:var(--bad-line);}
+  .reto.bad .status{color:var(--bad);} .reto.bad .status .dot{background:var(--bad);}
+
+  .check-row{display:flex; align-items:center; gap:10px; cursor:pointer; user-select:none; font-size:.88rem;}
+  .check-row input{width:18px; height:18px; accent-color:var(--ok); flex:none; cursor:pointer;}
+  .reto.done-doc{border-color:var(--ok-line); background:var(--ok-bg);}
+  .reto.done-doc .chip{color:var(--ok); border-color:var(--ok-line);}
+
+  .done{margin-top:28px; border:1px solid var(--ok-line); border-radius:12px; background:linear-gradient(180deg, var(--ok-bg), var(--panel)); padding:22px; text-align:center;}
+  .done h2{margin:0 0 4px; font-family:var(--mono); font-size:1.12rem; color:var(--ok);}
+  .done p{margin:0 auto 16px; color:var(--muted); font-size:.86rem; max-width:52ch;}
+  .code-box{display:inline-flex; flex-wrap:wrap; align-items:center; gap:10px 14px; justify-content:center; background:var(--bg); border:1px dashed var(--ok-line); border-radius:9px; padding:12px 16px; margin-bottom:18px;}
+  .code-box .k{font-size:.68rem; text-transform:uppercase; letter-spacing:.11em; color:var(--muted);}
+  .code-box .v{font-family:var(--mono); font-size:1.15rem; font-weight:600; letter-spacing:.03em; user-select:all;}
+  .btn{font-family:var(--sans); font-size:.8rem; font-weight:600; cursor:pointer; background:var(--panel-2); color:var(--fg); border:1px solid var(--line); border-radius:7px; padding:7px 13px; transition:border-color .18s ease;}
+  .btn:hover{border-color:var(--accent);}
+  .btn:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+  .name-row{display:flex; flex-wrap:wrap; gap:10px; justify-content:center; align-items:center; margin-bottom:16px;}
+  .name-row label{font-size:.8rem; color:var(--muted);}
+  #name-in{font-family:var(--sans); font-size:.9rem; color:var(--fg); background:var(--bg); border:1px solid var(--line); border-radius:7px; padding:8px 11px; min-width:0; flex:0 1 240px;}
+  #name-in:focus{outline:none; border-color:var(--accent); box-shadow:0 0 0 3px rgba(245,197,66,.15);}
+  .proof{font-family:var(--mono); font-size:.8rem; color:var(--fg); background:var(--bg); border:1px solid var(--line); border-radius:9px; padding:14px 16px; text-align:left; line-height:1.9; word-break:break-word;}
+  .proof .pl{color:var(--muted);} .proof .ac{color:var(--ok);}
+
+  footer{margin-top:30px; padding-top:16px; border-top:1px solid var(--line); display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between;}
+  footer .note{font-size:.76rem; color:var(--muted);}
+  .toast{position:fixed; left:50%; bottom:calc(18px + env(safe-area-inset-bottom,0px)); transform:translateX(-50%); background:var(--panel-2); border:1px solid var(--accent); color:var(--fg); font-size:.8rem; padding:9px 15px; border-radius:8px; opacity:0; transition:opacity .2s ease; pointer-events:none; z-index:30;}
+  .toast.show{opacity:1;}
+  @media (prefers-reduced-motion: reduce){*{transition:none !important;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brand">
+      <span class="glyph" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#f5c542" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="10.5" width="16" height="9.5" rx="2"></rect><path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"></path><circle cx="12" cy="15" r="1.3" fill="#f5c542" stroke="none"></circle>
+        </svg>
+      </span>
+      <div class="title-block">
+        <h1>Retos Opcionales</h1>
+        <p class="sub"><b>Plátanos del Norte S.L.</b> · Bloque avanzado OSINT</p>
+      </div>
+    </div>
+    <div class="clock">
+      <div class="t" id="clock-time">--:--:--</div>
+      <div id="clock-date">— · hora de Canarias</div>
+    </div>
+  </header>
+
+  <div class="banner">
+    <span>🎯</span>
+    <span><b>Bloque OPCIONAL y avanzado.</b> Hazlo después de los 13 retos base. <span class="muted">La entrega de este bloque es una <b style="color:var(--fg)">presentación</b> (diapositivas) con hallazgos, capturas fechadas, análisis de riesgos y recomendaciones. Aquí validas los 3 retos con flag y marcas los 2 de análisis.</span></span>
+  </div>
+
+  <div class="progress-card">
+    <div class="count"><span class="n" id="done-n">0</span><span class="d">/ 5</span><span class="lbl">retos</span></div>
+    <div class="bar-wrap">
+      <div class="bar"><i id="bar-fill"></i></div>
+      <div class="bar-sub" id="bar-sub">Flags: 0/3 · Análisis marcados: 0/2</div>
+    </div>
+  </div>
+
+  <section class="sec">
+    <h2 class="sec-head">Retos con flag (investigación, sin pistas)</h2>
+    <div id="flag-retos"></div>
+  </section>
+
+  <section class="sec">
+    <h2 class="sec-head">Retos de análisis — para la presentación</h2>
+    <div id="doc-retos"></div>
+  </section>
+
+  <section class="done" id="done-panel" hidden>
+    <h2>✓ Bloque opcional completado</h2>
+    <p>Has validado los 3 retos con flag y marcado los 2 de análisis. Este es tu código de verificación de este bloque. Captura este panel (con el reloj visible) y añádelo a tu presentación.</p>
+    <div class="code-box">
+      <span class="k">Código de verificación</span>
+      <span class="v" id="final-code">—</span>
+      <button class="btn" id="copy-code" type="button">Copiar</button>
+    </div>
+    <div class="name-row">
+      <label for="name-in">Tu nombre y apellidos:</label>
+      <input id="name-in" type="text" autocomplete="name" placeholder="Nombre Apellidos">
+    </div>
+    <div class="proof" id="proof">
+      <span class="pl">Alumno/a:</span> <span id="p-name">—</span><br>
+      <span class="pl">Bloque opcional:</span> <span class="ac">completado (3 flags + 2 análisis)</span><br>
+      <span class="pl">Fecha y hora:</span> <span id="p-date">—</span><br>
+      <span class="pl">Código:</span> <span class="ac" id="p-code">—</span>
+    </div>
+  </section>
+
+  <footer>
+    <span class="note">Entorno de laboratorio con fines educativos. Objetivo ficticio.</span>
+    <button class="btn" id="reset-btn" type="button">Reiniciar</button>
+  </footer>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+"use strict";
+(function(){
+  var FLAG_RETOS = [
+    {code:"OPC-01", title:"Fuga en el control de versiones",
+     desc:"La web se publica mediante un sistema de control de versiones público. Alguien subió un archivo sensible y luego lo eliminó, pero sigue siendo accesible. Localízalo y recupera la flag.",
+     hash:"7bf40624fde772166f125cafd4aba1a1ce247ce3c898a3f2008164a0425e5d4b"},
+    {code:"OPC-02", title:"La imagen que delata",
+     desc:"Una de las imágenes publicadas en el sitio contiene información oculta que revela una ubicación concreta. Encuéntrala, extrae lo que esconde y recupera la flag.",
+     hash:"e17e33eb885ca6d456e2c242f6b6d8db0779f3117f08ae2f69ccc1c0b21d25d8"},
+    {code:"OPC-03", title:"El recurso no enlazado",
+     desc:"Existe un archivo de respaldo que no está enlazado en ninguna página ni aparece en el sitemap. Descúbrelo y recupera la flag.",
+     hash:"a07997d8bc2daa472dedbacb25e7457e901ed635f348eb5558303b9a31682213"}
+  ];
+  var DOC_RETOS = [
+    {code:"OPC-04", title:"Análisis de vulnerabilidades",
+     desc:"Documenta las vulnerabilidades detectadas en todos los retos. Por cada una: el riesgo de haberla dejado expuesta y cómo debería corregirse."},
+    {code:"OPC-05", title:"Superficie de exposición",
+     desc:"Recopila toda la información obtenida sobre la organización: nombres y apellidos, correos, teléfonos, webs, dominios y subdominios, IPs, rutas internas, tecnologías… toda la superficie expuesta."}
+  ];
+  var STORE_KEY = "pltn_opcionales_v1";
+
+  function norm(v){ return (v||"").trim().toUpperCase(); }
+  async function sha256(str){ var b=await crypto.subtle.digest("SHA-256", new TextEncoder().encode(str)); return Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,"0");}).join(""); }
+  function load(){ try{ return JSON.parse(localStorage.getItem(STORE_KEY)||"{}")||{}; }catch(e){ return {}; } }
+  function save(o){ try{ localStorage.setItem(STORE_KEY, JSON.stringify(o)); }catch(e){} }
+
+  var state = load();            // {flags:{code:flag}, docs:{code:true}}
+  if(!state.flags) state.flags={}; if(!state.docs) state.docs={};
+  var inputs={};
+
+  var fc = document.getElementById("flag-retos");
+  FLAG_RETOS.forEach(function(r){
+    var el=document.createElement("div"); el.className="reto"; el.id="row-"+r.code;
+    el.innerHTML =
+      '<div class="reto-top"><span class="chip">'+r.code+'</span><span class="reto-title">'+r.title+'</span></div>'+
+      '<div class="reto-desc">'+r.desc+'</div>'+
+      '<div class="flag-row">'+
+        '<input class="flag-in" type="text" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="FLAG-..." aria-label="Flag para '+r.code+'">'+
+        '<span class="status" id="st-'+r.code+'"><span class="dot"></span><span class="txt">pendiente</span></span>'+
+      '</div>';
+    fc.appendChild(el);
+    inputs[r.code]=el.querySelector(".flag-in");
+  });
+
+  var dc = document.getElementById("doc-retos");
+  DOC_RETOS.forEach(function(r){
+    var el=document.createElement("div"); el.className="reto"; el.id="row-"+r.code;
+    el.innerHTML =
+      '<div class="reto-top"><span class="chip">'+r.code+'</span><span class="reto-title">'+r.title+'</span></div>'+
+      '<div class="reto-desc">'+r.desc+'</div>'+
+      '<label class="check-row"><input type="checkbox" id="chk-'+r.code+'"><span>Incluido en mi presentación</span></label>';
+    dc.appendChild(el);
+    el.querySelector("input").addEventListener("change", function(){
+      if(this.checked){ state.docs[r.code]=true; el.classList.add("done-doc"); }
+      else { delete state.docs[r.code]; el.classList.remove("done-doc"); }
+      save(state); update();
+    });
+  });
+
+  var timers={};
+  FLAG_RETOS.forEach(function(r){
+    inputs[r.code].addEventListener("input", function(){ clearTimeout(timers[r.code]); timers[r.code]=setTimeout(function(){ check(r); },220); });
+  });
+
+  async function check(r){
+    var inp=inputs[r.code], row=document.getElementById("row-"+r.code), st=document.getElementById("st-"+r.code);
+    var val=norm(inp.value);
+    if(!val){ row.classList.remove("ok","bad"); st.querySelector(".txt").textContent="pendiente"; delete state.flags[r.code]; save(state); update(); return; }
+    var h=await sha256(val);
+    if(h===r.hash){ row.classList.add("ok"); row.classList.remove("bad"); st.querySelector(".txt").textContent="validado"; inp.readOnly=true; inp.value=val; state.flags[r.code]=val; }
+    else { row.classList.add("bad"); row.classList.remove("ok"); st.querySelector(".txt").textContent="no coincide"; delete state.flags[r.code]; }
+    save(state); update();
+  }
+
+  var doneN=document.getElementById("done-n"), barFill=document.getElementById("bar-fill"), barSub=document.getElementById("bar-sub"), donePanel=document.getElementById("done-panel");
+  var codeShown=false;
+
+  async function update(){
+    var nf=Object.keys(state.flags).length, nd=Object.keys(state.docs).length, n=nf+nd;
+    doneN.textContent=n; barFill.style.width=(n/5*100).toFixed(1)+"%";
+    barSub.textContent="Flags: "+nf+"/3 · Análisis marcados: "+nd+"/2";
+    if(nf===3 && nd===2){ await reveal(); } else { donePanel.hidden=true; }
+  }
+  async function reveal(){
+    donePanel.hidden=false;
+    if(!codeShown){
+      var ordered=FLAG_RETOS.map(function(r){return state.flags[r.code];}).join("|");
+      document.getElementById("final-code").textContent="PLTN-OPC-"+(await sha256(ordered)).slice(0,12).toUpperCase();
+      document.getElementById("p-code").textContent=document.getElementById("final-code").textContent;
+      codeShown=true;
+    }
+    document.getElementById("p-name").textContent=document.getElementById("name-in").value.trim()||"—";
+    document.getElementById("p-date").textContent=fmtNow();
+  }
+  document.getElementById("name-in").addEventListener("input", function(){ document.getElementById("p-name").textContent=this.value.trim()||"—"; });
+
+  document.getElementById("copy-code").addEventListener("click", function(){
+    var code=document.getElementById("final-code").textContent;
+    function sel(){ try{ var rg=document.createRange(); rg.selectNodeContents(document.getElementById("final-code")); var s=window.getSelection(); s.removeAllRanges(); s.addRange(rg);}catch(e){} toast("Selecciona y copia"); }
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(code).then(function(){toast("Código copiado");}).catch(sel); } else sel();
+  });
+  var toastEl=document.getElementById("toast"), toastT;
+  function toast(m){ toastEl.textContent=m; toastEl.classList.add("show"); clearTimeout(toastT); toastT=setTimeout(function(){toastEl.classList.remove("show");},1700); }
+
+  document.getElementById("reset-btn").addEventListener("click", function(){
+    state={flags:{},docs:{}}; save(state); codeShown=false;
+    FLAG_RETOS.forEach(function(r){ var inp=inputs[r.code]; inp.readOnly=false; inp.value=""; var row=document.getElementById("row-"+r.code); row.classList.remove("ok","bad"); document.getElementById("st-"+r.code).querySelector(".txt").textContent="pendiente"; });
+    DOC_RETOS.forEach(function(r){ document.getElementById("chk-"+r.code).checked=false; document.getElementById("row-"+r.code).classList.remove("done-doc"); });
+    document.getElementById("name-in").value=""; update(); toast("Progreso reiniciado");
+  });
+
+  function fmtNow(){ try{ return new Intl.DateTimeFormat("es-ES",{dateStyle:"full",timeStyle:"medium",timeZone:"Atlantic/Canary"}).format(new Date()); }catch(e){ return new Date().toLocaleString("es-ES"); } }
+  function tick(){
+    var now=new Date(), o={timeZone:"Atlantic/Canary"};
+    try{
+      document.getElementById("clock-time").textContent=new Intl.DateTimeFormat("es-ES",Object.assign({hour:"2-digit",minute:"2-digit",second:"2-digit"},o)).format(now);
+      document.getElementById("clock-date").textContent=new Intl.DateTimeFormat("es-ES",Object.assign({weekday:"short",day:"2-digit",month:"short",year:"numeric"},o)).format(now)+" · hora de Canarias";
+    }catch(e){ document.getElementById("clock-time").textContent=now.toLocaleTimeString("es-ES"); }
+    if(!donePanel.hidden) document.getElementById("p-date").textContent=fmtNow();
+  }
+  tick(); setInterval(tick,1000);
+
+  // Restaurar
+  (async function(){
+    for(var i=0;i<FLAG_RETOS.length;i++){ var r=FLAG_RETOS[i]; if(state.flags[r.code]){ inputs[r.code].value=state.flags[r.code]; await check(r); } }
+    DOC_RETOS.forEach(function(r){ if(state.docs[r.code]){ document.getElementById("chk-"+r.code).checked=true; document.getElementById("row-"+r.code).classList.add("done-doc"); } });
+    update();
+  })();
+})();
+</script>
+</body>
+  </html>
