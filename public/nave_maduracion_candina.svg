@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Platanos del Norte S.L. - fotografia corporativa de instalaciones -->
+<!-- Geoetiqueta heredada del dispositivo de captura. Lugar: 28.1443, -15.6520 -->
+<!-- Marcador de verificacion del reto: FLAG-09-EXIF-GEO -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600" role="img">
+  <title>Nave de maduracion - Poligono Candina</title>
+  <desc>Fotografia corporativa de las naves. Coordenadas del lugar de captura (GPS): 28.1443, -15.6520. Ref. interna: FLAG-09-EXIF-GEO</desc>
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#">
+      <rdf:Description>
+        <dc:title>Nave de maduracion - Candina</dc:title>
+        <dc:creator>Dpto. de Comunicacion - Platanos del Norte S.L.</dc:creator>
+        <dc:date>2024-03-11</dc:date>
+        <geo:lat>28.1443</geo:lat>
+        <geo:long>-15.6520</geo:long>
+        <dc:identifier>FLAG-09-EXIF-GEO</dc:identifier>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#bfe3f2"/><stop offset="1" stop-color="#eef6ea"/>
+    </linearGradient>
+  </defs>
+  <rect width="1000" height="600" fill="url(#sky)"/>
+  <rect y="430" width="1000" height="170" fill="#8a9a6b"/>
+  <rect x="120" y="210" width="760" height="260" fill="#eceff1" stroke="#b9c2c7"/>
+  <polygon points="120,210 500,120 880,210" fill="#cfd8dc" stroke="#b9c2c7"/>
+  <rect x="150" y="300" width="120" height="170" fill="#9fb4bd"/>
+  <rect x="300" y="300" width="120" height="170" fill="#9fb4bd"/>
+  <rect x="580" y="300" width="120" height="170" fill="#9fb4bd"/>
+  <rect x="730" y="300" width="120" height="170" fill="#9fb4bd"/>
+  <rect x="440" y="340" width="120" height="130" fill="#5d6b53"/>
+  <rect x="420" y="235" width="300" height="46" rx="6" fill="#2f6b3a"/>
+  <text x="570" y="267" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#f5c542" text-anchor="middle">PLATANOS DEL NORTE</text>
+  <g fill="#f5c542" stroke="#caa028">
+    <rect x="150" y="485" width="70" height="46"/><rect x="230" y="485" width="70" height="46"/><rect x="310" y="485" width="70" height="46"/>
+    <rect x="700" y="485" width="70" height="46"/><rect x="780" y="485" width="70" height="46"/>
+  </g>
+  <text x="500" y="560" font-family="Arial, sans-serif" font-size="15" fill="#3d4a33" text-anchor="middle">Naves de maduracion en atmosfera controlada - Poligono Candina</text>
+</svg>
