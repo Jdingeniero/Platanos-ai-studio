@@ -741,7 +741,7 @@ Sitemap: https://jdingeniero.github.io/Platanos-ai-studio/sitemap.xml
                 </p>
               </div>
               <a
-                href="/sitemap.xml"
+                href="/Platanos-ai-studio/sitemap.xml"
                 target="_blank"
                 rel="noreferrer"
                 className="text-xs text-blue-600 hover:underline flex items-center gap-1 font-mono"
@@ -963,7 +963,7 @@ Sitemap: https://jdingeniero.github.io/Platanos-ai-studio/sitemap.xml
                     <td className="p-3 text-slate-800 font-bold">2.4 KB</td>
                     <td className="p-3 text-right">
                       <a
-                        href="/backup-2023/db_dump_preprod.sql"
+                        href="/Platanos-ai-studio/backup-2023/db_dump_preprod.sql"
                         download="db_dump_preprod.sql"
                         onClick={() => registerChallenge('reto-4')}
                         className="px-3 py-1 bg-rose-700 hover:bg-rose-800 text-white font-sans text-xs font-semibold rounded inline-flex items-center gap-1 transition-colors"
@@ -984,7 +984,7 @@ Sitemap: https://jdingeniero.github.io/Platanos-ai-studio/sitemap.xml
                     <td className="p-3 text-slate-800 font-bold">1.2 KB</td>
                     <td className="p-3 text-right">
                       <a
-                        href="/backup-2023/db_backup_preprod_20231102.sql.gz"
+                        href="/Platanos-ai-studio/backup-2023/db_backup_preprod_20231102.sql.gz"
                         download="db_backup_preprod_20231102.sql.gz"
                         className="px-3 py-1 bg-slate-800 hover:bg-slate-700 text-white font-sans text-xs font-semibold rounded inline-flex items-center gap-1 transition-colors"
                       >
@@ -1058,7 +1058,7 @@ Sitemap: https://jdingeniero.github.io/Platanos-ai-studio/sitemap.xml
                     <td className="p-3 text-slate-600 font-bold">1.1 KB</td>
                     <td className="p-3 text-right">
                       <a
-                        href="/chat/logs/conversacion_soporte_it_202311.log"
+                        href="/Platanos-ai-studio/chat/logs/conversacion_soporte_it_202311.log"
                         download="conversacion_soporte_it_202311.log"
                         className="px-3 py-1 bg-slate-900 hover:bg-slate-800 text-white font-sans text-xs font-semibold rounded inline-flex items-center gap-1 transition-colors"
                       >
@@ -1367,7 +1367,7 @@ Sitemap: https://jdingeniero.github.io/Platanos-ai-studio/sitemap.xml
             <button onClick={() => navigateTo('/contacto')} className="hover:text-emerald-800 hover:underline cursor-pointer">
               Contacto
             </button>
-            <a href="/sitemap.xml" target="_blank" rel="noreferrer" className="hover:text-emerald-800 hover:underline font-mono">
+            <a href="/Platanos-ai-studio/sitemap.xml" target="_blank" rel="noreferrer" className="hover:text-emerald-800 hover:underline font-mono">
               Sitemap XML
             </a>
             <span className="text-slate-400">·</span>
